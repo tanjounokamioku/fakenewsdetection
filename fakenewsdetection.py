@@ -13,6 +13,8 @@ from sklearn.metrics import confusion_matrix
 import seaborn as sn
 import matplotlib.pyplot as plt
 
+# Extract samples.zip and then start
+
 train = pd.read_csv('../input/fakenewsvortexbsb/train_df.csv', sep=';', error_bad_lines=False, quoting=3);
 
 # First four registries
