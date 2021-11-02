@@ -15,7 +15,7 @@ import matplotlib.pyplot as plt
 
 # Extract samples.zip and then start
 
-train = pd.read_csv('../input/fakenewsvortexbsb/train_df.csv', sep=';', error_bad_lines=False, quoting=3);
+train = pd.read_csv('train_df.csv', sep=';', error_bad_lines=False, quoting=3);
 
 # First four registries
 train.head(4) 
@@ -161,7 +161,7 @@ model_final = KNeighborsClassifier(n_neighbors=3)
 
 # Training model
 %time model_final = model_final.fit( train_data_features, train_y )
-test = pd.read_csv('../input/fakenewsvortexbsb/sample_submission.csv', sep=';', error_bad_lines=False, quoting=3);
+test = pd.read_csv('sample_submission.csv', sep=';', error_bad_lines=False, quoting=3);
 test.head(5)
 num_reviews, = test['Manchete'].shape
 print(num_reviews)
